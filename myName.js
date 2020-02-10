@@ -15,7 +15,7 @@ function createGreeting(name, age) {
   if (name === undefined || age === undefined) {
     throw new Error('age cannot be negative');
   }
-  if (typeof age !== 'number') {
+  if (typeof age === NaN) {
     throw new TypeError('Age must be a number');
   }
   const yob = getYearOfBirth(age);
