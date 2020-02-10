@@ -21,5 +21,9 @@ function createGreeting(name, age) {
   const yob = getYearOfBirth(age);
   return `Hi my name is ${name} I was born in ${yob} I am ${age} years old`;
 }
-const greeting1 = createGreeting('Ian', 25);
-console.log(greeting1);
+try {
+  const greeting1 = createGreeting('Ian', 25);
+  console.log(greeting1);
+} catch(e) {
+  console.error(e.message);
+}
